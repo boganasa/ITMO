@@ -1,0 +1,10 @@
+#! /bin/bash
+awk '$2 = "INFO" { print }' /var/log/anaconda/syslog > info.log
+[user@localhost lab1]$ cat Script6
+#! /bin/bash
+#-E -  расширенное регулярное выражение
+#-h - предотвращает выдачу имени файла, содержащего сопоставившуюся строку перед собственной строкой
+#-s - для замены
+grep "\\(WW\\)" -E -h -s /var/log/anaconda/X.log | sed -E "s/\\(WW\\)/Warning: /" > full.log
+grep "\\(II\\)" -E -h -s /var/log/anaconda/X.log | sed -E "s/\\(II\\)/Information: /" >> full.log
+cat full.log
