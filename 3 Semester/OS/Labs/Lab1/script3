@@ -1,0 +1,23 @@
+#! /bin/bash
+echo "Chose a number:"
+echo "1 -open nano"
+echo "2 - open vi"
+echo "3 - open link"
+echo "4 - close all"
+read key
+case $key in
+1)
+nano
+;;
+2)
+vi
+;;
+3)
+links
+;;
+4)
+;;
+*)
+echo "wrong input"
+;;
+esac
