@@ -1,0 +1,9 @@
+#! /bin/bash
+str_input=""
+str_sum=""
+while [ "$str_input" != "q" ]
+do
+str_sum="$str_sum$str_input"
+read str_input
+done
+echo "$str_sum"
