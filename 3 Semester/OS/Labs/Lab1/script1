@@ -1,0 +1,11 @@
+#! /bin/bash
+first=$1
+second=$2
+third=$3
+if [[ ("$first" -ge "$second") && ("$first" -ge "$third") ]]
+then echo $first
+elif [[ ("$second" -ge "$first") && ("$second" -ge "$third") ]]
+then echo $second
+else
+echo $third
+fi
